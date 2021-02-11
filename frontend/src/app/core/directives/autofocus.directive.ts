@@ -1,6 +1,6 @@
 import { AfterContentInit, Directive, ElementRef, Input, OnDestroy } from '@angular/core';
 
-var BASE_TIMER_DELAY = 10;
+const BASE_TIMER_DELAY = 10;
 
 @Directive({
   selector: '[jAutofocus]'
@@ -17,13 +17,6 @@ export class AutofocusDirective implements AfterContentInit, OnDestroy {
     this.timer = null;
   }
 
-  setDefaultValue() {
-    if (this.enable === false) {
-      return;
-    }
-    this.enable = true;
-  }
-
   public ngAfterContentInit(): void {
     this.setDefaultValue();
     if (this.enable) {
@@ -33,6 +26,13 @@ export class AutofocusDirective implements AfterContentInit, OnDestroy {
 
   public ngOnDestroy(): void {
     this.stopFocusWorkflow();
+  }
+
+  private setDefaultValue() {
+    if (this.enable === false) {
+      return;
+    }
+    this.enable = true;
   }
 
   private startFocusWorkflow(): void {

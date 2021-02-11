@@ -5,13 +5,14 @@ import { Component, Input } from '@angular/core';
   templateUrl: './svg-icon.component.html'
 })
 export class SvgIconComponent {
-  @Input() name: String;
+  @Input() name: string;
   @Input() size = 16;
-  @Input() fill = "currentColor"
+  @Input() fill = 'currentColor';
+  window: any = window;
 
   constructor() {}
 
   get iconUrl() {
-    return `${window.location.href}#${this.name}`;
+    return `${this.window.location.href}#${this.name}`;
   }
 }

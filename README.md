@@ -1,7 +1,8 @@
-# A simplified Jira clone built with Angular 9 and Akita
+# A simplified Jira clone built with Angular 10, Akita and ng-zorro
 
-> Phase two will not be completed as planned for 25 July. Both [Chau Tran][chau] and I was too busy with some other commitments.
-> You can check the latest Tetris game that I built with Angular and Akita in the meantime ➡ [tetris.trungk18.com](https://tetris.trungk18.com/) 🎮
+> Phase two will not be completed as planned. Both [Chau Tran][chau] and I was too busy with some other commitments. View our [working in progress Graph QL branch][gql].
+>
+> You can check the storybook collection of components I wrote for Jira Clone ➡ [jira-storybook.trungk18.com](https://jira-storybook.trungk18.com/) 📕
 >
 > Thanks for your continuous support. Stay tuned! :muscle:
 
@@ -13,9 +14,12 @@ This is not only a simplified Jira clone built with Angular 9, but also an examp
   <summary>Table Of Content</summary>
   <p>
 
-- [A simplified Jira clone built with Angular 9 and Akita](#a-simplified-jira-clone-built-with-angular-9-and-akita)
-
+- [A simplified Jira clone built with Angular 10, Akita and ng-zorro](#a-simplified-jira-clone-built-with-angular-10-akita-and-ng-zorro)
+  - [Merry Christmas](#merry-christmas)
   - [Working application](#working-application)
+  - [Storybook](#storybook)
+    - [What is Storybook](#what-is-storybook)
+    - [Jira Clone Storybook](#jira-clone-storybook)
   - [Support](#support)
   - [Who is it for 🤷‍♀️](#who-is-it-for-️)
   - [Tech stack](#tech-stack)
@@ -42,11 +46,38 @@ This is not only a simplified Jira clone built with Angular 9, but also an examp
   </p>
 </details>
 
+## Merry Christmas
+
+Thank you for your support! -> https://jira.trungk18.com/project/issue/2020
+
+![Jira clone built with Angular 9 and Akita][christmas2020]
+
 ## Working application
 
 Check out the **live demo** -> https://jira.trungk18.com
 
 ![Jira clone built with Angular 9 and Akita][demo]
+
+## Storybook
+
+### What is Storybook
+
+Storybook helps you build UI components in isolation from your app's business logic, data, and context.
+That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+
+### Jira Clone Storybook
+
+This is the collection of components that I wrote for [jira.trungk18.com][jira], includes:
+
+- Avatar
+- Breadcrumbs
+- Button
+- Input
+- More to come...
+
+Check out the **storybook demo** -> https://jira-storybook.trungk18.com/
+
+![Jira clone built with Angular 9 and Akita][demo-storybook]
 
 ## Support
 
@@ -157,13 +188,13 @@ I will take two weeks break to:
 
 ### Phase 2
 
-> August 2020
+> September ~ October 2020
 
 - [ ] Refactor the mono repo to use Nx Workspace
 - [ ] GraphQL API and store data on the actual database
 - [ ] Authentication
-- [ ] Websocket realtime update
-- [ ] Interactive report
+
+View the current [work in progress branch][gql]
 
 ## Tutorial
 
@@ -177,11 +208,27 @@ Its series will also be published in Vietnamese as part of our [angular-vietnam/
 
 | Part | Description                                                                     | Status |
 | ---- | ------------------------------------------------------------------------------- | ------ |
+| -1   | [Behind the 900 stars repository - Slide][part-1]                               | Done   |
 | 00   | [Prerequisites][part00]                                                         | Done   |
 | 01   | [Create a new repository and set up a new Angular application with CLI][part01] | Done   |
+| 02   | [Build the application layout with flex and TailwindCSS][part02]                | Done   |
+| 03   | [Setup Akita state management][part03]                                          | Done   |
+| 04   | [Build an editable textbox][part04]                                             | Done   |
+| 05   | [Build an interactive drag and drop board][part05]                              | Done   |
+| 06   | [Build a markdown text editor][part06]                                          | Done   |
+| 07   | [Build a rich text HTML editor][part07]                                         | Done   |
+| 08   | [Create placeholder loading (like Facebook's cards loading)][part08]            | Done   |
 
-[part00]: https://trungk18.com/experience/angular-jira-clone-tutorial-00-prerequisites
-[part01]: https://trungk18.com/experience/angular-jira-clone-tutorial-01-planning-and-set-up
+[part-1]: https://slides.com/tuantrungvo/behind-the-900-star-repository-jira-clone-angular
+[part00]: https://trungk18.com/experience/angular-jira-clone-tutorial-00-prerequisites/
+[part01]: https://trungk18.com/experience/angular-jira-clone-tutorial-01-planning-and-set-up/
+[part02]: https://trungk18.com/experience/angular-jira-clone-tutorial-02-application-layout-tailwindcss-flex/
+[part03]: https://trungk18.com/experience/angular-jira-clone-tutorial-03-akita-state-management/
+[part04]: https://trungk18.com/experience/angular-jira-clone-tutorial-04-editable-textbox/
+[part05]: https://trungk18.com/experience/angular-jira-clone-tutorial-05-interactive-drag-and-drop-board/
+[part06]: https://trungk18.com/experience/angular-jira-clone-tutorial-06-angular-markdown-text-editor/
+[part07]: https://trungk18.com/experience/angular-jira-clone-tutorial-07-rich-text-editor/
+[part08]: https://trungk18.com/experience/angular-jira-clone-tutorial-08-angular-placeholder-loading/
 [todo-list]: https://www.notion.so/trungk18/Tasks-636be5c5c0dd4d8cab30808e4e41facc
 
 ## Time spending
@@ -280,10 +327,13 @@ Feel free to use my code on your project. It would be great if you put a referen
 
 [MIT](https://opensource.org/licenses/MIT)
 
+[jira]: http://jira.trungk18.com/
 [oldboyxx]: https://github.com/oldboyxx/jira_clone
 [datlyfe]: https://github.com/Datlyfe/jira_clone
 [stack]: frontend/src/assets/img/jira-clone-tech-stack.png
 [demo]: frontend/src/assets/img/jira-clone-angular-demo-trungk18.gif
+[christmas2020]: frontend/src/assets/img/merry-christmas-2020.gif
+[demo-storybook]: frontend/src/assets/img/jira-storybook.gif
 [time]: frontend/src/assets/img/time-spending.png
 [issues]: https://github.com/trungk18/jira-clone-angular/issues/new
 [pull]: https://github.com/trungk18/jira-clone-angular/compare
@@ -298,3 +348,4 @@ Feel free to use my code on your project. It would be great if you put a referen
 [lazy-load]: https://angular.io/guide/lazy-loading-ngmodules
 [chau]: https://github.com/nartc
 [tiep]: https://github.com/tieppt
+[gql]: https://github.com/trungk18/jira-clone-angular/tree/feature/gql

@@ -20,7 +20,7 @@ export class IssueDescriptionComponent implements OnChanges {
   constructor(private _projectService: ProjectService) {}
 
   ngOnChanges(changes: SimpleChanges): void {
-    let issueChange = changes.issue;
+    const issueChange = changes.issue;
     if (issueChange.currentValue !== issueChange.previousValue) {
       this.descriptionControl = new FormControl(this.issue.description);
     }
@@ -31,7 +31,9 @@ export class IssueDescriptionComponent implements OnChanges {
   }
 
   editorCreated(editor: any) {
-    editor.focus && editor.focus();
+    if (editor && editor.focus) {
+      editor.focus();
+    }
   }
 
   save() {
@@ -46,6 +48,4 @@ export class IssueDescriptionComponent implements OnChanges {
     this.descriptionControl.patchValue(this.issue.description);
     this.setEditMode(false);
   }
-
-  ngOnInit(): void {}
 }
